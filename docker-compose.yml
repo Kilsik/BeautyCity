@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  web:
+    build: .
+    container_name: bot
+    command: python manage.py bot
+    ports:
+      - 80:80
+    volumes:
+      - ./:/app
+    env_file:
+      - .env
